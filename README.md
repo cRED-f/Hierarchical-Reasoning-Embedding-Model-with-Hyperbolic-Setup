@@ -29,9 +29,9 @@ We train a model so that:
 
 Ranking during evaluation uses hyperbolic distance:
 
-\[
-ext{score}(q,p) = - d\_{\mathbb{B}}(y^{(M)}(q),\ y^{(M)}(p))
-\]
+$$
+\\text{score}(q,p) = - d_{\\mathbb{B}}\\big(y^{(M)}(q),\\ y^{(M)}(p)\\big)
+$$
 
 ---
 
@@ -51,15 +51,15 @@ ext{score}(q,p) = - d\_{\mathbb{B}}(y^{(M)}(q),\ y^{(M)}(p))
 
 Each tangent is normalized to a direction and scaled by a segment-dependent scalar `s_m`:
 
-\[
-u^{(m)} = s_m \cdot \frac{h^{(m)}}{\|h^{(m)}\|}
-\]
+$$
+u^{(m)} = s_m \cdot \frac{h^{(m)}}{\lVert h^{(m)}\rVert}
+$$
 
 Then mapped to Poincaré ball via the exponential map at the origin:
 
-\[
-y^{(m)} = \exp_0^c(u^{(m)})
-\]
+$$
+y^{(m)} = \exp_0^c\big(u^{(m)}\big)
+$$
 
 Increasing `s_m` makes later segments lie at larger radii, representing finer detail.
 
@@ -67,15 +67,15 @@ Increasing `s_m` makes later segments lie at larger radii, representing finer de
 
 For each segment `m`, we blend coarse and fine positives using `alpha_m`:
 
-\[
+$$
 L_m = (1-\alpha_m)\,\text{NCE}(q, pc, \text{negs}) + \alpha_m\,\text{NCE}(q, pf, \text{negs})
-\]
+$$
 
 Total loss is a weighted sum over segments:
 
-\[
+$$
 L = \sum_m w_m L_m
-\]
+$$
 
 ---
 
