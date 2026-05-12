@@ -114,7 +114,7 @@ This creates a mapping where small tangents near the origin stay close to the or
 
 The hyperbolic distance between two points `x, y ∈ ℙⁿ` is:
 
-$$d_\mathbb{B}(x, y) = \frac{1}{\sqrt{c}} \operatorname{arcosh}\left(1 + 2c\frac{\|x-y\|^2}{(1-c\|x\|^2)(1-c\|y\|^2)}\right)$$
+$$d_\mathbb{B}(x, y) = \frac{1}{\sqrt{c}} {arcosh}\left(1 + 2c\frac{\|x-y\|^2}{(1-c\|x\|^2)(1-c\|y\|^2)}\right)$$
 
 ### Hierarchy by Construction
 
